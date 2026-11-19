@@ -3,34 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_auth"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.mgarzondev.vaultlymobile.presentation.fragment.welcome.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.vaultlymobile.presentation.fragment.auth.LoginFragment"
+        android:name="com.mgarzondev.vaultlymobile.presentation.fragment.auth.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment"
-            app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/registerFragment"/>
+
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"/>
 
     </fragment>
 
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.vaultlymobile.presentation.fragment.auth.RegisterFragment"
+        android:name="com.mgarzondev.vaultlymobile.presentation.fragment.auth.RegisterFragment"
         android:label="Register"
         tools:layout="@layout/fragment_register">
 
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/loginFragment"/>
+
+        <action
+            android:id="@+id/action_registerFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"/>
 
     </fragment>
 

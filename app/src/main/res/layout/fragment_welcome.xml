@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.welcome.WelcomeFragment"
+    android:background="@drawable/gradient_1">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon_vaultly_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_title"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="100dp" />
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@+id/icon"
+        app:layout_constraintEnd_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        android:contentDescription="@string/app_name"
+        android:elevation="100dp" />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@+id/icon"
+        app:layout_constraintEnd_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        android:contentDescription="@string/app_name"
+        android:elevation="100dp" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/image_coins"
+        android:rotation="-20"
+        android:src="@drawable/coins"
+        app:layout_constraintTop_toBottomOf="@+id/circle"
+        app:layout_constraintStart_toStartOf="@+id/circle2"
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/image_wallet"
+        android:src="@drawable/wallet"
+        android:rotation="-20"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        app:layout_constraintTop_toTopOf="@+id/circle2"
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/image_pig_money"
+        android:src="@drawable/pig_money"
+        android:rotation="20"
+        app:layout_constraintTop_toBottomOf="@+id/circle"
+        app:layout_constraintEnd_toEndOf="@+id/circle2"
+        />
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/image_report_money"
+        android:src="@drawable/report_money"
+        android:rotation="20"
+        app:layout_constraintTop_toTopOf="@id/circle2"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/circle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_argument"
+        android:text="@string/title_text_welcome"
+        android:textSize="40sp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title_sin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/circle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_argument"
+        android:text="sin"
+        android:textSize="40sp"
+        android:fontFamily="@font/plus_jakarta_sans_extra_bold"
+        android:textColor="@color/secondary_ligth"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintVertical_bias="0.45"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title_esfuerzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_argument"
+        android:text="esfuerzo."
+        android:textSize="40sp"
+        android:fontFamily="@font/plus_jakarta_sans_extra_bold"
+        android:textColor="@color/secondary_ligth"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_argument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        android:text="@string/text_argument_welcome"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/plus_jakarta_sans_light"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        style="@style/solidButton"
+        app:layout_constraintTop_toBottomOf="@+id/text_argument"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        android:text="@string/text_login"
+        android:elevation="100dp"
+        app:backgroundTint="@color/secondary"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_button"
+        style="@style/outlineButton"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/text_register"
+        android:elevation="100dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/o"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/register_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/with_google"
+        style="@style/solidButton"
+        app:layout_constraintTop_toBottomOf="@+id/text_o"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/continuar_con_google"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:icon="@drawable/google_svgrepo_com"
+        app:iconGravity="start"
+        app:iconSize="25dp"
+        app:iconPadding="25dp"
+        android:textAlignment="center"
+        app:iconTint="@null"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/version_app"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

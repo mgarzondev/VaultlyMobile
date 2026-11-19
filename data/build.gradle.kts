@@ -52,9 +52,6 @@ dependencies {
     // Domain module dependency
     implementation(project(":domain"))
 
-    // Data module dependency
-    implementation(project(":data"))
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

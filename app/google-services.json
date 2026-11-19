@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1024065245092",
+    "project_id": "vaultlymobile-c0478",
+    "storage_bucket": "vaultlymobile-c0478.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024065245092:android:208bcd479efc549e7f7b31",
+        "android_client_info": {
+          "package_name": "com.mgarzondev.vaultlymobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSs0bc-leLu_iXj5Wtw5r_FDDWOIeX_Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
