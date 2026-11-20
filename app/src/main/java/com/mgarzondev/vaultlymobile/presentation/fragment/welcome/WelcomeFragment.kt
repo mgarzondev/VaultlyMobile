@@ -44,6 +44,10 @@ class WelcomeFragment : Fragment() {
             goToRegister()
         }
 
+        binding?.withGoogleButton?.setSafeOnClickListener {
+
+        }
+
     }
 
     private fun goToLogin() {

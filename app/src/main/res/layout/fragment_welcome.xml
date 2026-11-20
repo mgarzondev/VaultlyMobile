@@ -203,7 +203,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/with_google"
+        android:id="@+id/with_google_button"
         style="@style/solidButton"
         app:layout_constraintTop_toBottomOf="@+id/text_o"
         android:layout_marginTop="10dp"

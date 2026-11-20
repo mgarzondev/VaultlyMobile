@@ -4,9 +4,9 @@
     <color name="primary_ligth">#3B82FF</color>
     <color name="dark_primary">#1E3A8A</color>
     <color name="secondary">#10b981</color>
-    <color name="secondary_ligth">#0ECC8D</color>
+    <color name="secondary_ligth">#76EFBE</color>
     <color name="back">#f9fafb</color>
-    <color name="dark_back">#e5e7eb</color>
+    <color name="dark_back">#EAEBF4</color>
     <color name="text">#111827</color>
     <color name="secondary_text">#6b7280</color>
     <color name="acent">#D9A211</color>

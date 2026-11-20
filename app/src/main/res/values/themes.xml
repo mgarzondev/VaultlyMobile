@@ -24,8 +24,8 @@
 
     <style name="outlineButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:layout_height">60dp</item>
-        <item name="android:layout_width">350dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">370dp</item>
+        <item name="android:textSize">17sp</item>
         <item name="strokeColor">@color/white</item>
         <item name="strokeWidth">1dp</item>
         <item name="android:textColor">@color/white</item>
@@ -34,9 +34,51 @@
 
     <style name="solidButton" parent="Widget.Material3.Button">
         <item name="android:layout_height">60dp</item>
-        <item name="android:layout_width">350dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">370dp</item>
+        <item name="android:textSize">17sp</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+    </style>
+
+    <style name="cardRadiusTop" parent="Widget.Material3.CardView.Filled">
+        <item name="shapeAppearanceOverlay">@style/ShapeOverlay.Card.Top40</item>
+    </style>
+
+    <style name="ShapeOverlay.Card.Top40" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">45dp</item>
+        <item name="cornerSizeTopRight">45dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="InputValueWhite" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeOverlay.InputTextWhite</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="hintEnabled">false</item>
+        <item name="cursorColor">@color/secondary</item>
+        <item name="boxStrokeColor">@color/secondary</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+    </style>
+
+    <style name="ShapeOverlay.InputTextWhite" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+    <style name="InputValueGray" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeOverlay.InputTextGray</item>
+        <item name="boxBackgroundColor">@color/dark_back</item>
+        <item name="hintEnabled">false</item>
+        <item name="cursorColor">@color/secondary</item>
+        <item name="boxStrokeColor">@color/secondary</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+    </style>
+
+    <style name="ShapeOverlay.InputTextGray" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
     </style>
 
 </resources>

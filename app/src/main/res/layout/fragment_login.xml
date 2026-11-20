@@ -44,14 +44,14 @@
         android:layout_height="wrap_content"
         android:text="@string/welcome_subtitle"
         app:layout_constraintTop_toBottomOf="@+id/lineLogin"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label_email"
         app:layout_constraintEnd_toEndOf="parent"
         android:fontFamily="@font/plus_jakarta_sans_bold"
         android:textSize="32sp"
         android:textColor="@color/primary"
         android:textAlignment="textStart"
         app:layout_constraintHorizontal_bias="0"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         />
 
 
@@ -64,7 +64,7 @@
         android:text="@string/argument_login"
         android:textColor="@color/secondary_text"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label_email"
         app:layout_constraintTop_toBottomOf="@+id/text_subtitle" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -77,29 +77,19 @@
         android:textSize="14sp"
         android:layout_marginBottom="6dp"
         app:layout_constraintTop_toBottomOf="@+id/text_argument"
-        app:layout_constraintStart_toStartOf="@+id/text_argument"
+        app:layout_constraintStart_toStartOf="@+id/input_value_email"
         android:layout_marginTop="35dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_value_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InputValueWhite"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_email"
-        app:hintEnabled="false"
-        app:boxBackgroundMode="outline"
-        app:boxCornerRadiusBottomStart="15dp"
-        app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:boxCornerRadiusBottomEnd="15dp"
-        app:boxBackgroundColor="@color/white"
-        app:cursorColor="@color/secondary"
         android:layout_marginTop="10dp"
-        app:boxStrokeColor="@color/secondary"
-        app:boxStrokeWidthFocused="1.5dp"
-        app:boxStrokeWidth="0dp"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -126,27 +116,17 @@
         android:textSize="14sp"
         android:layout_marginBottom="6dp"
         app:layout_constraintTop_toBottomOf="@+id/input_value_email"
-        app:layout_constraintStart_toStartOf="@+id/input_value_email"
+        app:layout_constraintStart_toStartOf="@+id/label_email"
         android:layout_marginTop="20dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_value_pwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        style="@style/InputValueWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_pwd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:hintEnabled="false"
-        app:boxBackgroundMode="outline"
-        app:boxCornerRadiusBottomStart="15dp"
-        app:boxCornerRadiusTopEnd="15dp"
-        app:boxCornerRadiusTopStart="15dp"
-        app:boxCornerRadiusBottomEnd="15dp"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="@color/secondary"
-        app:boxStrokeWidthFocused="1.5dp"
-        app:boxStrokeWidth="0dp"
-        app:cursorColor="@color/secondary"
         android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -180,7 +160,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
+        style="@style/solidButton"
         android:layout_height="60dp"
         android:text="@string/ingresar"
         app:icon="@drawable/sharp_keyboard_arrow_right_24"
@@ -190,11 +170,10 @@
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/input_value_pwd"
         app:layout_constraintStart_toStartOf="@+id/input_value_pwd"
-        app:cornerRadius="20dp"
+        app:cornerRadius="30dp"
         app:backgroundTint="@color/secondary"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/plus_jakarta_sans_medium"
-        android:textSize="15sp"
         android:textAllCaps="false"
         />
 

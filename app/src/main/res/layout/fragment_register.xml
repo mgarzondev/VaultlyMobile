@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.fragment.auth.RegisterFragment"
-    android:background="@drawable/gradient_1"
-    android:padding="30dp">
+    android:background="@drawable/gradient_1">
 
 
     <ImageView
@@ -20,18 +19,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:elevation="100dp"
         app:layout_constraintVertical_bias="0.1"
+        android:layout_marginStart="30dp"
         />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EMPIEZA HOY"
+        android:text="@string/empieza_hoy"
         app:layout_constraintTop_toBottomOf="@+id/icon"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="16sp"
-        android:fontFamily="@font/plus_jakarta_sans_semi_bold"
+        android:fontFamily="@font/plus_jakarta_sans_extra_bold"
         android:textColor="@color/secondary_ligth"
+        android:letterSpacing="0.2"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
         />
 
     <com.google.android.material.textview.MaterialTextView
@@ -45,16 +48,198 @@
         android:fontFamily="@font/plus_jakarta_sans_bold"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_title_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/en_orden"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="35sp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:textColor="@color/secondary_ligth"
+        android:layout_marginTop="10dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.525"
         />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/form_register"
+        style="@style/cardRadiusTop"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:cardCornerRadius="40dp"
+        android:layout_height="650dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="70dp"
-        />
+        android:backgroundTint="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contraint_form_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="10dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/form_register_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crea_tu_cuenta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="20sp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:textColor="@color/text"
+                android:layout_marginTop="10dp"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHorizontal_bias="0.525"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/form_register_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toma_menos_de_un_minuto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/form_register_title"
+                android:textSize="16sp"
+                android:fontFamily="@font/plus_jakarta_sans_light"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="10dp"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHorizontal_bias="0.525"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_value_name"
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                style="@style/InputValueGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/form_register_subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                app:startIconDrawable="@drawable/user"
+                app:startIconTint="@color/primary"
+                app:startIconScaleType="centerInside">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:hint="Nombre Completo"
+                    android:textColorHint="@color/secondary_text"
+                    android:fontFamily="@font/plus_jakarta_sans_regular"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_value_email"
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                style="@style/InputValueGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_value_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                app:startIconDrawable="@drawable/at"
+                app:startIconTint="@color/primary"
+                app:startIconScaleType="centerInside">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_text_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email_label"
+                    android:textColorHint="@color/secondary_text"
+                    android:fontFamily="@font/plus_jakarta_sans_regular"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_value_pwd"
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                style="@style/InputValueGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_value_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                app:startIconDrawable="@drawable/lock_password"
+                app:startIconTint="@color/primary"
+                app:startIconScaleType="centerInside">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_text_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="@string/contrase_a_m_n_8_caracteres"
+                    android:textColorHint="@color/secondary_text"
+                    android:fontFamily="@font/plus_jakarta_sans_regular"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_value_pwd_confirm"
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                style="@style/InputValueGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_value_pwd"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                app:startIconDrawable="@drawable/lock_password"
+                app:startIconTint="@color/primary"
+                app:startIconScaleType="centerInside">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_text_pwd_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/secondary_text"
+                    android:fontFamily="@font/plus_jakarta_sans_regular"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRegister"
+                style="@style/solidButton"
+                android:layout_height="60dp"
+                android:text="Crear cuenta gratis"
+                app:icon="@drawable/sharp_keyboard_arrow_right_24"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/white"
+                app:iconSize="20dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/input_value_pwd_confirm"
+                app:layout_constraintStart_toStartOf="@+id/input_value_pwd"
+                app:cornerRadius="30dp"
+                app:backgroundTint="@color/secondary"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:textAllCaps="false"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 
